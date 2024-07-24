@@ -7,6 +7,7 @@
 - Data Loading
 - Maturity Conversion and Evaluation Date
 - €STR Discount Curve Construction
+- ECB Liquidity Check Jumps
 - Biased Euribor 6M Curve Construction
 - Synthetic Deposits and Corrected Euribor Curve
 - Single Curve Euribor Construction
@@ -35,6 +36,9 @@ These maturities are then converted into QuantLib periods, and the evaluation da
 
 The €STR discount curve is constructed using deposit rate helpers for short-term maturities and OIS rate helpers for longer maturities.
 This allows for an accurate representation of the discount factors over a wide range of maturities.
+
+## ECB Liquidity Check Jumps
+The analysis includes consideration of the jump effect due to ECB deadlines of liquidity management controls
 
 ## Biased Euribor 6M Curve Construction
 
@@ -73,6 +77,5 @@ This project is licensed under the MIT License.
 
 This study is still under development. The next steps include:
 
-- Incorporating the turn-of-year jump effect.
-- Considering ECB meeting dates for the construction of the €STR curve.
+- Delving into and verifying the accuracy of incorporating the ECB liquidity chek jump effect.
 - Comparing different curves when varying the instruments used for bootstrapping.
